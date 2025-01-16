@@ -1,0 +1,23 @@
+@import '../../../../styles.css';
+@import '../palletColor/palletColor.scss';
+
+
+button{
+    width: 8rem;
+    height: 2.6rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: $primarywhite;
+    border-radius: 6px;
+    border: none;
+    background-color: $primarygreen;
+    transition: 0.2s;
+        &:hover{
+            background-color: $primarygreen_hover;
+            transition: 0.2s;
+        }
+        &:active{
+            background-color: $primarygreen_active;
+            transition: 0.2s;
+        }
+}
