@@ -1,10 +1,10 @@
 import React from "react";
 import '../Signup/Signup.scss';
 
-const Signup = () =>{
-    return(
+const Signup = () => {
+    return (
         <>
-            Olá SignUp
+        Olá Signup
         </>
     );
 };
