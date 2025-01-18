@@ -12,6 +12,7 @@ button{
     border: none;
     background-color: $primarygreen;
     transition: 0.2s;
+    cursor: pointer;
         &:hover{
             background-color: $primarygreen_hover;
             transition: 0.2s;
