@@ -55,7 +55,6 @@ app.post("/GoogleLogin", async (req, res) => {
         console.log("Payload do Google:", payload);
 
         // Verifica se o usuário já existe no banco de dados
-        // Verifica se o usuário já existe no banco de dados
         db.query("SELECT * FROM users WHERE email = ?", [email], (err, result) => {
             if (err) {
                 console.error("Erro ao consultar o banco de dados:", err);
@@ -80,6 +79,22 @@ app.post("/GoogleLogin", async (req, res) => {
         console.error("Erro ao verificar token do Google:", error);
         return res.status(401).send({ msg: "Token inválido ou expirado" });
     }
+});
+
+// Rota de login via email e senha
+app.post("/Login", (req, res) => {
+    const { email, password } = req.body;
+    db.query("SELECT * FROM users WHERE email = ? AND password = ?", [email, password], (err, result) => {
+        if (err) {
+            console.error("Erro ao consultar o banco de dados:", err);
+            return res.status(500).send({ msg: "Erro ao consultar o banco de dados" });
+        }
+        if (result.length === 0) {
+            return res.status(401).send({ msg: "Credenciais inválidas" });
+        } else {
+            return res.status(200).send({ msg: "Login bem-sucedido" });
+        }
+    });
 });
 
 // Inicia o servidor

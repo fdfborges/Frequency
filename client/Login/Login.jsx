@@ -32,7 +32,7 @@ const Login = () => {
         console.log("Token recebido:", credentialResponse.credential); // Verifique o token recebido
         // Aqui você pode enviar a credencial para o backend
         Axios.post("http://localhost:4000/GoogleLogin", {
-            token: credentialResponse.credential // Envia o token correto
+            credential: credentialResponse.credential // Envia o token correto
         }).then((response) => {
             console.log("Usuário logado com Google", response);
         }).catch((error) => {
