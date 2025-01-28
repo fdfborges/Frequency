@@ -91,7 +91,9 @@ const Login = () => {
                             <div className="FooterForm">
                                 <div className="ButtonAndForgotPassword">
                                     <button className="button" type="submit">Login</button>
-                                    <span className="ForgotPassword">Esqueci minha senha</span>
+                                    <span>
+                                        <Link className="FooterLogin" to="/ForgotMyPassword">Esquci minha senha</Link>
+                                    </span>
                                 </div>
                                 <span>
                                     Não tem uma conta?{' '}
