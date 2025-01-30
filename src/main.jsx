@@ -7,6 +7,7 @@ import Footer from './assets/components/Footer/Footer.Jsx';
 import Login from '../client/Login/Login';
 import Signin from '../client/Signin/Signin';
 import ForgotMyPassword from '../client/ForgotMyPassword/ForgotMyPassword'
+import Functionality from '../src/assets/pages/Functionality/Functionality'
 
 ReactDOM.createRoot(root).render(
   <BrowserRouter>
@@ -16,7 +17,7 @@ ReactDOM.createRoot(root).render(
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Signin' element={<Signin/>}/>
         <Route path='/ForgotMyPassword' element={<ForgotMyPassword/>}/>
-        
+        <Route path='/Functionality' element={<Functionality />} />
       </Routes>
       <Footer />
   </BrowserRouter>
