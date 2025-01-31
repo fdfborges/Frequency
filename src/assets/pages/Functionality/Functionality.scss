@@ -2,7 +2,7 @@
 
 .container {
     display: flex;
-    
+
     .right {
         display: flex;
         justify-content: center;
@@ -22,7 +22,7 @@
             gap: 3.8rem;
             padding: 2rem;
             box-sizing: border-box;
-            box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.25);
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 
             & span {
                 font-size: 2rem;
@@ -41,7 +41,8 @@
                         border-radius: 0px 6px 6px 0px;
                     }
                 }
-                .ActiveBtnSelector{
+
+                .ActiveBtnSelector {
                     background-color: $primarygreen_active2;
                 }
             }
@@ -56,7 +57,8 @@
                 height: 4rem;
                 font-size: 1.5rem;
             }
-            .ActiveBtnCounter{
+
+            .ActiveBtnCounter {
                 background-color: $primaryred;
             }
         }
@@ -64,8 +66,57 @@
 
     .left {
         display: flex;
-        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        flex: 1.2;
         background-color: green;
         height: 100vh;
+
+        .containerDashboard {
+            width: 100%;
+            height: 100%;
+            .TitleDaysOfensive {
+                margin: 1rem 0;
+                font-weight: 600;
+                color: $primarywhite;
+                font-size: 1.6rem;
+            }
+            .ContainerOfensive {
+                display: flex;
+                justify-content: space-around;
+                width: 95%;
+                height: 5.6rem;
+                border-radius: 6px;
+                background-color: black;
+
+                .ContainerTitleAndCheck {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.3rem;
+                    color: $primarywhite;
+                    font-weight: 600;
+
+                    .CheckOfensive {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100%;
+                        background-color: rgb(102, 102, 102);
+                        .CheckSeg{
+                            height: 100%;   
+                        }
+                    }
+                }
+            }
+        }
+
     }
+
+
 }
